@@ -6,6 +6,8 @@
     --table-color: #d4c5b8;
     --h-button:#dad5d6;
     --table-button: #8fa2a6;
+    --form-background-color: #8FA2A6;
+    --form-border-color: #B2B5B9
 }
 
 html {
@@ -75,13 +77,46 @@ main {
 }
 
 .popup .popup-form {
-    visibility: hidden;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
     position: absolute;
+    top: 100px;
+    left: 50%;
+    visibility: hidden;
+    text-align: center;
+    padding: 1em;
+    margin-left: -190px;
+    background-color: var(--form-background-color);
+    border: 5px solid var(--form-border-color);
+    border-radius: 6px;
+}
+
+.popup h3 {
+    font-size: 28px;
+    white-space: nowrap;
+}
+
+.popup input {
+    font-size: 20px;
+    text-align: center;
+    width: 60%;
+    margin: 0.5em;
+}
+
+.popup div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin: 0.5em 0;
+}
+
+.popup div input {
+    width: fit-content;
+    margin-left: 0.7em;
+    transform: scale(1.5);
+}
+
+.popup button {
+    font-size: 20px;
 }
 
 .popup .show {
