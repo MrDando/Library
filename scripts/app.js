@@ -124,6 +124,14 @@ function checkLibrary () {
     }
 }
 
+function popupForm () {
+    let popup = document.getElementById("form");
+    popup.classList.toggle("show");
+}
+
 let myLibrary = [];
 dummyLibrary(15);
 checkLibrary();
+
+const addBtn = document.getElementById('add-button')
+addBtn.addEventListener('click', popupForm)
