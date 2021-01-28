@@ -92,10 +92,17 @@ function dummyLibrary (num) {
     }
 }
 
-function updateLibrary (myLibrary) {
+function updateLibrary () {
+    clearTable ();
+
     for (let i = 0; i < myLibrary.length; i++) {
         updateTable(myLibrary[i])
     }
+}
+
+function clearTable () {
+    tbody = document.querySelector('#table-body');
+    tbody.innerText = "";
 }
 
 function emptyLibrary () {
@@ -121,7 +128,7 @@ function checkLibrary () {
         emptyLibrary();
     } else {
         createTable()
-        updateLibrary(myLibrary)
+        updateLibrary()
     }
 }
 
@@ -130,9 +137,24 @@ function popupForm () {
     popup.classList.toggle("show");
 }
 
+function addBookToLibrary () {
+    const title = document.getElementById('form-title').value;
+    const author = document.getElementById('form-author').value;
+    const pages = document.getElementById('form-pages').value;
+    const read = document.getElementById('form-read').checked;
+
+    const book = new Book (title, author, pages, read);
+
+    myLibrary.push(book)
+    updateLibrary();
+}
+
 let myLibrary = [];
 dummyLibrary(15);
 checkLibrary();
 
 const addBtn = document.getElementById('add-button')
 addBtn.addEventListener('click', popupForm)
+
+const submitBtn = document.getElementById('submit-button');
+submitBtn.addEventListener('click', addBookToLibrary)

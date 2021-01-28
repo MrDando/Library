@@ -15,16 +15,16 @@
     </header>
     <main>
       <div class='popup'>
-        <form id='form' class='popup-form'>
+        <form id='form' class='popup-form' onsubmit="return false">
           <h3>Add a new book to the library</h3>
           <input id='form-title' type='text' placeholder="Title">
           <input id='form-author' type='text' placeholder="Author">
-          <input id='form-pages' type='number' placeholder="Number of pages">
+          <input id='form-pages' type='text' placeholder="Number of pages">
           <div>
             <p>Already read?</p>
             <input id='form-read' type='checkbox'>
           </div>
-          <button id='submit-book'>Add</button>
+          <button id='submit-button'>Add</button>
         </form>
       </div>
     </main>
