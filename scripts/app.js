@@ -10,7 +10,7 @@ function createTable () {
     const table = document.createElement('table')
     const tableHead = document.createElement('thead')
     const tableBody = document.createElement('tbody')
-    const headerRow = document.createElement('tbody')
+    const headerRow = document.createElement('tr')
     const headingNumber = document.createElement('td')
     const headingTitle = document.createElement('td')
     const headingAuthor = document.createElement('td')
@@ -21,6 +21,7 @@ function createTable () {
 
     container.appendChild(table);
     table.appendChild(tableHead);
+    tableBody.setAttribute('id', 'table-body');
     table.appendChild(tableBody);
 
     headerRow.setAttribute('id', 'header-row');
@@ -37,7 +38,7 @@ function createTable () {
 }
 
 function updateTable (book) {
-    const tBody = document.querySelector('#header-row');
+    const tBody = document.querySelector('#table-body');
     const tRow = document.createElement('tr');
     const bookNumber = document.createElement('td')
     const bookTitle = document.createElement('td')
