@@ -6,7 +6,7 @@ function Book (title, author, pages, read = false) {
 };
 
 function createTable () {
-    const container = document.querySelector('#container')
+    const container = document.querySelector('main')
     const table = document.createElement('table')
     const tableHead = document.createElement('thead')
     const tableBody = document.createElement('tbody')
@@ -99,7 +99,7 @@ function updateLibrary (myLibrary) {
 
 function emptyLibrary () {
     const main = document.querySelector('main')
-    const container = document.querySelector('#container')
+    const container = document.querySelector('main')
     const defaultMsg = document.createElement('div')
     const row1 = document.createElement('div')
     const row2 = document.createElement('div')
